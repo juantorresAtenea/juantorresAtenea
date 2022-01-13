@@ -1,0 +1,16 @@
+{
+  "defaultCommandTimeout": 60000,
+  "testFiles": "**/*.feature",
+  "ignoreTestFiles": "*.js",
+  "env": {
+    "ENV": "stg",
+    "TAGS": "not @WIP and not @DEPRECATED"
+  },
+  "video": true,
+  "retries": {
+    "runMode": 1,
+    "openMode": 0
+  },
+  "projectId": "7fok3m",
+  "chromeWebSecurity": false
+}

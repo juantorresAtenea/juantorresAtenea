@@ -1,0 +1,26 @@
+{
+  "defaultCommandTimeout": 60000,
+  "testFiles": "**/*.feature",
+  "ignoreTestFiles": "*.js",
+  "env": {
+    "ENV": "stg",
+    "TAGS": "not @WIP and not @DEPRECATED"
+  },
+  "video": false,
+  "retries": {
+    "runMode": 1,
+    "openMode": 0
+  },
+  "projectId": "7fok3m",
+  "chromeWebSecurity": false,
+  "reporter": "cypress-testrail-accumulative-reporter",
+  "reporterOptions": {
+    "domain": "mailshake.testrail.io",
+    "username": "xxx@mailshake.co",
+    "password": "Passw0rd",
+    "projectId": 1,
+    "suiteId": 1,
+    "runName": "Automation test suite results",
+    "assignedto_id": 4
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "mailshakedemo",
+  "version": "1.0.0",
+  "description": "Test case automation framework",
+  "main": "index.js",
+  "scripts": {
+    "open": "node_modules\\.bin\\cypress open",
+    "test": "node_modules\\.bin\\cypress run",
+    "testDashboardHeadless": "npm run test -- --record --key d8a84789-7e86-4b2e-81dd-d44d42ad9b89 --headless",
+    "testAndRecord": "npm run test -- --config-file cypress_videos.json --browser chrome",
+    "testTestRail": "npm run test -- --headless --config-file cypress_testrail.json",
+    "testHeadless": "npm run test -- --headless",
+    "testHeaded": "npm run test -- --headed",
+    "testHeadedChrome": "npm run test -- --browser chrome --headed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.xxxxx.co/QA/cb-automation.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "chalk": "^4.1.1",
+    "cucumber-html-reporter": "^5.4.0",
+    "cypress": "^8.3.0",
+    "cypress-cucumber-preprocessor": "^4.0.1",
+    "cypress-file-upload": "^5.0.7",
+    "cypress-testrail-accumulative-reporter": "https://github.com/fmihaich/cypress-testrail-accumulative-reporter.git",
+    "yargs": "^16.2.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}
